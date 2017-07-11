@@ -41,9 +41,6 @@ package World;
         print CGI::param("foo");
 
         $cgi->print("Hello World");
-
     }
-
-
 # End of Class
 1;
