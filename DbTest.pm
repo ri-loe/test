@@ -30,6 +30,8 @@ sub selectAll {
         print "letzte Aktualisierung: ". $row[4] . "\n";
     }
 }
+
+# starts the selectAll method
 selectAll();
 
 # enables cli subroutine calls
