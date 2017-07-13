@@ -22,4 +22,12 @@ print "$ages[0] " . "$ages[1]\n";
 
 # forcing scalar on array, results in value count
 print scalar(@keys) . "\n";
+
+# checking for existence TODO
+my $input = <STDIN>;
+if (exists($data{$input})) {
+    print "$input ist in \$data.\n";
+} else {
+    print "Lege $input in \$data an!\n";
+}
 1;
