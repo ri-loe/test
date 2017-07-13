@@ -1,5 +1,5 @@
 package Dbtest;
-#se strict;
+#use strict;
 use warnings FATAL => 'all';
 
 use DBI;
