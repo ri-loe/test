@@ -1,5 +1,5 @@
 package Dbtest;
-#use strict;
+use strict;
 use warnings FATAL => 'all';
 
 use DBI;
@@ -23,15 +23,19 @@ sub selectAll {
     $prepQuery->execute();
 
     while (my @row = $prepQuery->fetchrow_array()) {
-        print "ID = ". $row[0] . " ";
-        print "Name = ". $row[1] . "\n";
+        print "ID: ". $row[0] . "\n";
+        print "Name: ". $row[1] . "\n";
+        print "Vorname: ". $row[2] . "\n";
+        print "Geburtstag: ". $row[3] . "\n";
+        print "letzte Aktualisierung: ". $row[4] . "\n";
     }
 }
+selectAll();
 
 # enables cli subroutine calls
-unless (caller) {
-    print shift->(@ARGV);
-}
+#unless (caller) {
+#    print shift->(@ARGV);
+#}
 
 $dbh->disconnect();
 1;
